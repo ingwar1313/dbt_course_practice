@@ -1,0 +1,35 @@
+sources:
+  - name: demo_src
+    description: Данные из БД авиаперелетов
+    tables:
+      - name: aircrafts
+        description: Модели самолетов
+        columns:
+          - name: aircraft_code
+            description: Код Модели самолета
+          - name: model
+            description: Название модели самолета
+          - name: range
+            description: Неизвестное поле
+      - name: airports
+        description: Аэропорты
+        columns:
+          - name: airport_code
+            description: Код аэропорта
+          - name: airport_name
+            description: Название аэропорта
+          - name: city
+            description: Описание аэропорта 
+          - name: coordinates
+            description: Координаты аэропорта
+          - name: timezone
+            description: Часовой пояс аэропорта
+      - name: seats
+        description: Посадочные места
+        columns:
+          - name: aircraft_code
+            description: Код Модели самолета
+          - name: seat_no
+            description: Номер посадочного места
+          - name: fare_conditions
+            description: Условия оплаты
