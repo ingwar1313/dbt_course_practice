@@ -33,3 +33,18 @@ sources:
             description: Номер посадочного места
           - name: fare_conditions
             description: Условия оплаты
+      - name: bookings
+        config:
+          freshness: 
+            warn_after: {count: 6, period: hour}
+            error_after: {count: 10000, period: day}
+            filter: current_timestamp::date - book_date::date < 30000
+          loaded_at_field: book_date::timestamp 
+        description: Бронирования
+        columns:
+          - name: book_ref
+            description: ID бронирования
+          - name: book_date
+            description: Дата бронирования
+          - name: total_amount
+            description: Общая сумма бронирования
