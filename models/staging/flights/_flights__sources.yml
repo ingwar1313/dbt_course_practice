@@ -48,3 +48,49 @@ sources:
             description: Дата бронирования
           - name: total_amount
             description: Общая сумма бронирования
+      - name: boarding_passes
+        description: Посадочные талоны
+        columns:
+          - name: ticket_no
+            description: ID билета
+          - name: flight_id
+            description: ID полета
+          - name: boarding_no
+            description: ID посадочного талона
+          - name: seat_no
+            description: Номер места
+      - name: flights
+        description: Полеты
+        columns:
+          - name: flight_id
+            description: ID полета
+          - name: flight_no
+            description: Номер полета
+          - name: scheduled_departure
+            description: Время отправления по расписанию
+          - name: scheduled_arrival
+            description: Время прибытия по расписанию
+          - name: departure_airport
+            description: Аэропорт отправления
+          - name: arrival_airport
+            description: Аэропорт прилета
+          - name: status
+            description: Статус полета
+          - name: aircraft_code
+            description: Код модели самолета
+          - name: actual_departure
+            description: Актуальное время отправления
+          - name: actual_arrival
+            description: Актуальное время прибытия
+      - name: ticket_flights
+        description: Оплата билетов по полетам
+        columns:
+          - name: ticket_no
+            description: ID билета
+          - name: flight_id
+            description: ID полета
+          - name: fare_conditions
+            description: Класс пассажира
+          - name: amount
+            description: Сумма оплаты
+                  
